@@ -20,6 +20,8 @@ Provided a search term, it will compile a list of the top 50 materials present i
 
 To create this list, it's a bit janky. I don't have a MatWeb membership (nor do I expect actual users of my code to have one either), so instead I use pdfkit & the wkhtmltopdf binary to convert the headless webpage into a pdf. This pdf is then interpreted by pdfplumber to convert into a .csv and Pandas dataframe, with a bit of post-processing to fix formatting issues generally.
 
+I'm considering a version of this tool that doesn't require this extra step or play around with PATH variables, but I've yet to find a package that can do that (or develop my own).
+
 ### Running as its own script
 To run this script independently:
 
