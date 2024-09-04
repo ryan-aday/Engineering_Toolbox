@@ -16,7 +16,7 @@ Since there was no good method to procure actually useful engineering data, I fi
 The script parses through MatWeb to determine material properties. MatWeb is THE material repository- SolidWorks, COMSOL, Autodesk, Ansys all borrow its data.
 Provided a search term, it will compile a list of the top 50 materials present in MatWeb's repository, then choose the one that best fits the search term.
 
-To create this list, it's a bit janky. I don't have a MatWeb membership (nor do I expect actual users of my code to have one either), so instead I use pdfkit & the wkhtmltopdf binary to convert the headless webpage into a pdf. This pdf is then interpreted by pdfpluber to convert into a .csv and Pandas dataframe, with a bit of post-processing to fix formatting issues generally.
+To create this list, it's a bit janky. I don't have a MatWeb membership (nor do I expect actual users of my code to have one either), so instead I use pdfkit & the wkhtmltopdf binary to convert the headless webpage into a pdf. This pdf is then interpreted by pdfplumber to convert into a .csv and Pandas dataframe, with a bit of post-processing to fix formatting issues generally.
 
 ### Running as its own script
 To run this script independently:
@@ -38,7 +38,7 @@ The most important functions to reference from this script, if you want to use i
 
 ## pipe_stress_metric.py
 
-This calculates the stress of a continuous tube based on a few user inputs.
+This calculates the stress of a continuous tube based on a few user inputs (which of course, should be written in metric units).
 
 By default, these are the various queries:
 
