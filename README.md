@@ -13,7 +13,7 @@ Here is the link: https://matminer.readthedocs.io/en/latest/
 
 I also wanted to avoid Selenium solutions, as they're far clunkier, and some machines have restrictions on what you can reference for work tasks, including APIs.
 
-Since there was no good method to procure actually useful engineering data, I figured I'd do it myself.
+Since there was no good method to procure actually useful engineering data for Python automation, I figured I'd do it myself.
 
 The script parses through MatWeb to determine material properties. MatWeb is THE material repository- SolidWorks, COMSOL, Autodesk, Ansys all borrow its data.
 Provided a search term, it will compile a list of the top 50 materials present in MatWeb's repository, then choose the one that best fits the search term.
