@@ -34,9 +34,41 @@ The most important functions to reference from this script, if you want to use i
   - retrieve_material_data: Allows you to get the MatWeb material characteristics. Example call:
 
         material_data = retrieve_material_data(material_name)
+
+     If you were to try, as another example:
+
+        retrieve_material_data("Aluminum_6061")
+
+    You'd see something akin to:
+        
+        Best match based on Levenshtein distance: Aluminum 6061-O - https://www.matweb.com/search/DataSheet.aspx?MatGUID=626ec8cdca604f1994be4fc2bc6f7f63
+
+  - retrieve_material_data_verbose: Works the same as retrieve_material_data, only you get to see the top 50 MatWeb matches as per your query. Example call:
+
+        material_data = retrieve_material_data(material_name)
+
+    If you were to try, as another example:
+
+        retrieve_material_data_verbose("Aluminum_6061")
+
+    You'd see something akin to:
+    
+        1. Aluminum 6061A Composition Spec - https://www.matweb.com/search/DataSheet.aspx?MatGUID=98d7fcd57e3845d68124c1bc4376618a
+        2. Alclad Aluminum 6061-O - https://www.matweb.com/search/DataSheet.aspx?MatGUID=6c41b0bdea564d20b9fd287c03c97923
+        3. Alclad Aluminum 6061-T4, T451 - https://www.matweb.com/search/DataSheet.aspx?MatGUID=1318cc5c380f46e59cd00339fb7d3a91
+        4. Alclad Aluminum 6061-T6, T651 - https://www.matweb.com/search/DataSheet.aspx?MatGUID=3a2e111b27ef4e5d813bad6044b3f318
+        5. Aluminum 6061-O - https://www.matweb.com/search/DataSheet.aspx?MatGUID=626ec8cdca604f1994be4fc2bc6f7f63
+        6. Aluminum 6061-T4; 6061-T451 - https://www.matweb.com/search/DataSheet.aspx?MatGUID=d5ea75577b1b49e8ad03caf007db5ba8
+        7. Aluminum 6061-T6; 6061-T651 - https://www.matweb.com/search/DataSheet.aspx?MatGUID=b8d536e0b9b54bd7b69e4124d8f1d20a
+        8. Aluminum 6061-T8 - https://www.matweb.com/search/DataSheet.aspx?MatGUID=90404a0c001c4016b2b359a6c19f9127
+        9. Aluminum 6061-T91 - https://www.matweb.com/search/DataSheet.aspx?MatGUID=e6212a3df98d4a7eb51edc1b1d3927ed
+        10. Aluminum 6061-T913 - https://www.matweb.com/search/DataSheet.aspx?MatGUID=0f6b9e4702884eadbe6a8450cf89a925
+        
+        Best match based on Levenshtein distance: Aluminum 6061-O - https://www.matweb.com/search/DataSheet.aspx?MatGUID=626ec8cdca604f1994be4fc2bc6f7f63
+    
   - levenshtein_distance: Allows you to calculate the Levenshtein distance between 2 strings to compare how likely one is to match the other. The smaller the distance, the more likely. You could use a different library for string matching, but it's much faster to implement a local algorithm. It is not necessary to import this in addition to retrieve_material_data. Example call:
 
-        levenshtein_distance("Yield Strength", "Feet")
+        distance = levenshtein_distance("Yield Strength", "Feet")
 
 ## pipe_stress_metric.py
 
