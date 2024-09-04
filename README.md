@@ -1,5 +1,5 @@
 # Engineering_Toolbox
-An engineering toolbox with some powerful calculators and data scrapers. Keeping engineering free!
+An engineering toolbox with some powerful calculators and data scrapers.
 
 ## material_data_scraper.py
 This script can be run independently from the pipe_stress_metric calculator.py script. It is intended to be cross-functional with any outside script.
