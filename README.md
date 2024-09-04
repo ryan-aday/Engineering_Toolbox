@@ -11,6 +11,8 @@ Matminer is currently an API that exists, but:
 3. There is no good search method within the API.
 Here is the link: https://matminer.readthedocs.io/en/latest/
 
+I also wanted to avoid Selenium solutions, as they're far clunkier, and some machines have restrictions on what you can reference for work tasks, including APIs.
+
 Since there was no good method to procure actually useful engineering data, I figured I'd do it myself.
 
 The script parses through MatWeb to determine material properties. MatWeb is THE material repository- SolidWorks, COMSOL, Autodesk, Ansys all borrow its data.
