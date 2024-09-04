@@ -63,7 +63,7 @@ def get_yield_strength_from_scraper(material_name):
 
 # Main function to prompt the user for inputs and calculate hoop stress
 def main():
-    print("Hoop Stress and Flow Rate Calculator")
+    print("Pipe Stress Calculator (Metric)")
     
     # Default values
     default_flow_rate = 100  # m³/s
