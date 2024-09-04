@@ -42,6 +42,8 @@ The most important functions to reference from this script, if you want to use i
 
 This calculates the stress of a continuous tube based on a few user inputs (which of course, should be written in metric units).
 
+This also uses CoolProp to import fluid properties, like viscosity, upon simple material calls like "Water".
+
 By default, these are the various queries:
 
     Enter the outer diameter of the pipe (in meters) [default: 1]:
