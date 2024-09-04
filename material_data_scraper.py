@@ -98,7 +98,7 @@ def find_best_match(user_query, material_results):
             return name, link
     return None, None
 
-# Step 6: Main material data retrieval function for external use
+# Step 6: Baseline material data retrieval function for external use
 def retrieve_material_data(material_query):
     # Configuration for wkhtmltopdf
     config = pdfkit.configuration(wkhtmltopdf='C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe')
@@ -124,7 +124,38 @@ def retrieve_material_data(material_query):
             return merged_table
     return None
 
-# Minimal __main__ to run the script directly
+# Step 7: Verbose material data retrieval function for external use
+def retrieve_material_data_verbose(material_query):
+    # Configuration for wkhtmltopdf
+    config = pdfkit.configuration(wkhtmltopdf='C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe')
+
+    # Find material matches
+    material_results = extract_matweb_results(material_query)
+    if material_results:
+        # Print all found material matches
+        print("Found the following material matches:")
+        for idx, (name, link) in enumerate(material_results, start=1):
+            print(f"{idx}. {name} - {link}")
+        
+        best_name, best_link = find_best_match(material_query, material_results)
+        if best_name and best_link:
+            print(f"\nBest match based on Levenshtein distance: {best_name} - {best_link}")
+
+            # Convert the best matched webpage to PDF
+            output_pdf = "material_webpage.pdf"
+            convert_webpage_to_pdf(best_link, output_pdf, config)
+
+            # Extract and merge tables from the generated PDF (skipping the first table)
+            merged_table = extract_and_merge_tables_from_pdf(output_pdf)
+
+            # Clean up: delete the PDF after extraction
+            if os.path.exists(output_pdf):
+                os.remove(output_pdf)
+
+            return merged_table
+    return None
+
+# Step 8: Main function using baseline material data retrieval
 if __name__ == "__main__":
     import sys
 
