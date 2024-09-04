@@ -54,7 +54,8 @@ The most important functions to reference from this script, if you want to use i
         retrieve_material_data_verbose("Aluminum_6061")
 
     You'd see something akin to:
-    
+
+        Found the following material matches:
         1. Aluminum 6061A Composition Spec - https://www.matweb.com/search/DataSheet.aspx?MatGUID=98d7fcd57e3845d68124c1bc4376618a
         2. Alclad Aluminum 6061-O - https://www.matweb.com/search/DataSheet.aspx?MatGUID=6c41b0bdea564d20b9fd287c03c97923
         3. Alclad Aluminum 6061-T4, T451 - https://www.matweb.com/search/DataSheet.aspx?MatGUID=1318cc5c380f46e59cd00339fb7d3a91
