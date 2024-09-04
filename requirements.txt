@@ -1,0 +1,9 @@
+CoolProp
+numpy
+matminer
+materials
+requests
+bs4
+pandas
+pdfplumber
+pdfkit
