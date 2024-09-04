@@ -79,6 +79,10 @@ This calculates the stress of a continuous tube based on a few user inputs (whic
 
 This also uses CoolProp to import fluid properties, like viscosity, upon simple material calls like "Water".
 
+To call the function:
+
+    python pipe_stress_metric.py
+
 By default, these are the various queries:
 
     Enter the outer diameter of the pipe (in meters) [default: 1]:
@@ -95,6 +99,16 @@ By default, these are the various queries:
 
 The stress is calculated based on well known formulae and takes into account shape factors formed by tube bends. This stress is then compared to the yield stress foumd through the data collected by material_data_scraper.py to determine whether the design passes or fails. The default parameters should fail.
 
+Here's what the default output should look like:
+
+    Best match found: Copper, Cu; Annealed - https://www.matweb.com/search/DataSheet.aspx?MatGUID=9aebe83845c04c1db5126fada6f76f7e
+    Webpage saved as PDF: material_webpage.pdf
+    Closest match found for Yield Strength: Density
+    
+    Calculated Hoop Stress (adjusted for bends): 45596250.00 Pa
+    Material Yield Strength: 7764000.00 Pa
+    Adjusted Yield Strength (with Safety Factor): 7764000.00 Pa
+    Warning: The design fails. The calculated stress exceeds the adjusted yield stress.
 
 ![3-s2 0-B9780123868886000018-f01-04-9780123868886](https://github.com/user-attachments/assets/8ceaa2b6-9d46-4d7c-9551-4207a0ae8cdd)
 
