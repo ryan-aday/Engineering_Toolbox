@@ -38,15 +38,17 @@ def get_yield_strength_from_scraper(material_name):
     
     if material_data is not None and not material_data.empty:
         # First, try to find rows that mention "Yield Strength" directly
-        yield_data = material_data[material_data['Properties'].str.contains("Yield Strength", case=False)]
+        yield_data = material_data[material_data['Properties'].str.contains("yield", case=False)]
+        closest_match = yield_data['Properties'].iloc[0]
         
         # If direct match is not found, use Levenshtein to find the closest match
         if yield_data.empty:
             # Find the closest match to "Yield Strength" using Levenshtein distance
             material_properties = material_data['Properties'].tolist()
-            closest_match = min(material_properties, key=lambda prop: levenshtein_distance("Yield Strength", prop))
-            print(f"Closest match found for Yield Strength: {closest_match}")
+            closest_match = min(material_properties, key=lambda prop: levenshtein_distance("Yield", prop))
             yield_data = material_data[material_data['Properties'] == closest_match]
+        
+        print(f"Closest match found for Yield Strength: {closest_match}")
 
         # If yield strength data is available, return the metric value (assumed to be in MPa)
         if not yield_data.empty:
