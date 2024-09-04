@@ -103,11 +103,11 @@ Here's what the default output should look like:
 
     Best match found: Copper, Cu; Annealed - https://www.matweb.com/search/DataSheet.aspx?MatGUID=9aebe83845c04c1db5126fada6f76f7e
     Webpage saved as PDF: material_webpage.pdf
-    Closest match found for Yield Strength: Density
+    Closest match found for Yield Strength: Tensile Strength, Yield
     
     Calculated Hoop Stress (adjusted for bends): 45596250.00 Pa
-    Material Yield Strength: 7764000.00 Pa
-    Adjusted Yield Strength (with Safety Factor): 7764000.00 Pa
+    Material Yield Strength: 33300000.00 Pa
+    Adjusted Yield Strength (with Safety Factor): 33300000.00 Pa
     Warning: The design fails. The calculated stress exceeds the adjusted yield stress.
 
 ![3-s2 0-B9780123868886000018-f01-04-9780123868886](https://github.com/user-attachments/assets/8ceaa2b6-9d46-4d7c-9551-4207a0ae8cdd)
