@@ -62,7 +62,7 @@ The stress is calculated based on well known formulae and takes into account sha
 ![zs4G3](https://github.com/user-attachments/assets/f9241c22-bf49-45e1-a2ef-bcaedd2557a5)
 
 
-Note that if the pipe has a bend, the shape factor is determined by the bend radius.
+Note that if the pipe has a bend, the shape factor is determined by the bend radius Rb. r_m is the mean radius, as shown.
 
 ![image](https://github.com/user-attachments/assets/b20d4450-6244-4c14-9b58-8d9bf8bb6fdf)
 
